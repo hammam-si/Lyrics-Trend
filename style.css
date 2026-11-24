@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+  color: #f0cfd3;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  height: 100vh;
+  overflow: hidden;
+  user-select: none;
+}
+
+#start-screen {
+  position: fixed;
+  inset: 0;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  z-index: 20;
+  cursor: pointer;
+}
+
+#start-screen .prompt {
+  color: #ff4d4d;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-shadow: 0 0 16px rgba(255, 77, 77, 0.55);
+}
+
+#start-screen .sub {
+  color: #6e474e;
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+}
+
+#viewport {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+#camera-rig {
+  position: absolute;
+  top: 52%;
+  left: 10vw;
+  will-change: transform;
+}
+
+#editor {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  font-size: clamp(2rem, 4.8vw, 4.1rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+}
+
+.code-line {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+  will-change: opacity, transform;
+}
+
+.kw      { color: #ff4d4d; text-shadow: 0 0 14px rgba(255, 77, 77, 0.35); }
+.fn      { color: #ff4d4d; text-shadow: 0 0 14px rgba(255, 77, 77, 0.35); }
+.punc    { color: #ff4d4d; text-shadow: 0 0 12px rgba(255, 77, 77, 0.3); }
+.id      { color: #f0cfd3; text-shadow: 0 0 12px rgba(240, 207, 211, 0.2); }
+.str     { color: #ffffff; text-shadow: 0 0 18px rgba(255, 255, 255, 0.38); }
+.comment { color: #8c5862; font-weight: 500; }
+.handle  { color: #e8b4bc; text-shadow: 0 0 16px rgba(232, 180, 188, 0.35); }
+
+.scramble-char {
+  color: #ff4d4d;
+  text-shadow: 0 0 16px rgba(255, 77, 77, 0.85);
+}
+
+.cursor {
+  display: inline-block;
+  color: #ff4d4d;
+  font-weight: 700;
+  margin-left: 2px;
+  text-shadow: 0 0 14px rgba(255, 77, 77, 0.9);
+  animation: blink 0.65s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
