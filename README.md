@@ -2,6 +2,12 @@
 
 A minimalist, terminal-inspired lyric visualizer built with HTML, CSS, Vanilla JavaScript, and GSAP. Lyrics are rendered as syntax-highlighted pseudo-code with a character-by-character glitch decode effect, synchronized directly to audio playback.
 
+
+
+https://github.com/user-attachments/assets/0810e741-4b20-435d-a2e8-9f4f616d79ac
+
+
+
 ## Features
 
 - **Audio-Synchronized Timeline:** Uses `requestAnimationFrame` locked to `audio.currentTime` for frame-accurate lyric triggers without timer drift.
