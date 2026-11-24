@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/0810e741-4b20-435d-a2e8-9f4f616d79ac
 
 ## Features
 
-- **Audio-Synchronized Timeline:** Uses `requestAnimationFrame` locked to `audio.currentTime` for frame-accurate lyric triggers without timer drift.
+- **Audio-Synchronized Timeline:** locked to `audio.currentTime` for frame-accurate lyric triggers without timer drift.
 - **Scramble / Glitch Decode Effect:** Flashes randomized symbols (`$%#*@^&!?~¥/\|<>`) before locking each character into syntax-highlighted tokens.
 - **2D Camera Tracking (`#camera-rig`):** Smoothly pans horizontally when lines extend past `68%` of the viewport width and shifts vertically to keep the active line centered.
 - **Depth Opacity Decay:** Gradually fades previous lines (`1.0` -> `0.38` -> `0.16` -> `0.06`) to maintain focus on the active lyric.
